@@ -71,6 +71,26 @@ For CSV edits, also verify that:
 - footnote IDs used in `data.csv` exist in `notes.csv`;
 - new notes in `notes.csv` use the `id,text` format.
 
+## Continuous Integration (CI)
+
+The repository uses GitHub Actions (`.github/workflows/ci.yml`) to automatically validate the format of `data.csv` and `notes.csv` on pushes and pull requests. The validation is performed by `scripts/validate_csv.py`.
+
+The script enforces the following constraints to prevent bad data from breaking the table rendering:
+
+For `data.csv`:
+- Cannot be empty.
+- Every row must have the exact same number of columns as the header row.
+- All double quotes and commas must be properly escaped per standard CSV format.
+- Every footnote reference (e.g. `[1]`) must have a corresponding ID in `notes.csv`.
+
+For `notes.csv`:
+- Cannot be empty.
+- The header must have at least 2 columns (e.g., `id,text`).
+- Every row must have the exact same number of columns as the header row.
+- The `id` (first column) must be a numeric value.
+
+If any of these conditions are violated, the CI workflow will fail, blocking invalid changes.
+
 ## Data Rules
 
 - One row in `data.csv` corresponds to one router.
