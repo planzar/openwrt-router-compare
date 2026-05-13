@@ -54,6 +54,7 @@ The project has no automated tests. After making changes, verify manually that:
 - the table loads without browser console errors;
 - the first row and first column remain sticky;
 - theme switching works and persists in `localStorage`;
+- theme synchronizes automatically with system preference if not manually overridden;
 - footnotes in `[1]` format are converted to `sup` and scroll to the corresponding note;
 - search works correctly, shows result counts, and the clear button (X) resets the state;
 - column sorting works (Natural Sort), and the active column has the `.active-sort` class;

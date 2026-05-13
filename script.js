@@ -3,21 +3,32 @@
 ===================== */
 
 const toggleBtn = document.getElementById("theme-toggle");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const storedTheme = localStorage.getItem("theme");
+const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-setTheme(storedTheme || (prefersDark ? "dark" : "light"));
+function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    toggleBtn.textContent = theme === "dark" ? "☀" : "🌙";
+}
+
+function getSystemTheme() {
+    return mediaQuery.matches ? "dark" : "light";
+}
+
+const storedTheme = localStorage.getItem("theme");
+applyTheme(storedTheme || getSystemTheme());
 
 toggleBtn.addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme");
-    setTheme(current === "dark" ? "light" : "dark");
+    const newTheme = current === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", newTheme);
+    applyTheme(newTheme);
 });
 
-function setTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-    toggleBtn.textContent = theme === "dark" ? "☀" : "🌙";
-}
+mediaQuery.addEventListener("change", () => {
+    if (!localStorage.getItem("theme")) {
+        applyTheme(getSystemTheme());
+    }
+});
 
 /* =====================
    DATA LOADING
