@@ -4,7 +4,7 @@ Instructions for agents working in this repository.
 
 ## About the Project
 
-This is a small static page for comparing MediaTek MT7981 routers with an OpenWRT focus.
+This is a small static page for comparing routers with an OpenWRT focus.
 
 - `index.html` contains the page markup.
 - `style.css` contains all styles, including the light and dark themes.
@@ -109,7 +109,7 @@ If any of these conditions are violated, the CI workflow will fail, blocking inv
 - Do not add a bundler, framework, or TypeScript for small changes.
 - Prefer simple changes in the existing `index.html`, `style.css`, and `script.js` files.
 - Do not change the public format of `data.csv` or `notes.csv` without updating README.
-- When changing project structure, run commands, deployment, CSV format, highlight CSS classes, or other working rules, update this `AGENTS.md`.
+- **CRITICAL**: Always proactively update this `AGENTS.md` without asking if your task alters the project scope, file structure, CSV formats, CSS classes, or other working rules.
 - If this `AGENTS.md` needs additions or corrections, write them in English.
 - When adding new highlight classes, update CSS, README, and this file.
 - When inserting data into the DOM, avoid unsafe HTML where it is not required. Currently, HTML is only needed for footnotes inside cells.

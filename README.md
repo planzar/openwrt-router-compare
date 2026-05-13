@@ -1,6 +1,6 @@
 # OpenWRT Router Compare
 
-Интерактивная таблица сравнения бюджетных роутеров, поддерживающих прошивку на OpenWRT
+Интерактивная таблица сравнения роутеров, поддерживающих прошивку на OpenWRT
 
 🔗 Онлайн-версия: https://HattabbI4.github.io/openwrt-router-compare/
 

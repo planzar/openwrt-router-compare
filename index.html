@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <title>Сравнение среднебюджетных роутеров MT7981</title>
+    <title>Сравнение роутеров с поддержкой OpenWRT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Сравнительная таблица характеристик бюджетных роутеров на базе MediaTek MT7981 с поддержкой OpenWRT">
+    <meta name="description" content="Сравнительная таблица характеристик роутеров с поддержкой OpenWRT">
     <!-- Open Graph / Facebook / Telegram -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Сравнение роутеров MT7981 (OpenWRT)">
-    <meta property="og:description" content="Удобная таблица характеристик, поиск и сортировка роутеров на базе MediaTek MT7981.">
+    <meta property="og:title" content="Сравнение роутеров с поддержкой OpenWRT">
+    <meta property="og:description"
+        content="Удобная таблица характеристик, поиск и сортировка роутеров с поддержкой OpenWRT.">
     <meta property="og:image" content="og-preview.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="top-bar">
-    <div>
-        <h1>Сравнение среднебюджетных роутеров MT7981</h1>
-        <p class="subtitle">Технические характеристики и особенности</p>
+    <header class="top-bar">
+        <div>
+            <h1>Сравнение роутеров с поддержкой OpenWRT</h1>
+            <p class="subtitle">Технические характеристики и особенности</p>
+        </div>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+            🌙
+        </button>
+    </header>
+
+    <div class="search-bar">
+        <div class="search-wrapper">
+            <input type="text" id="search-input" placeholder="Поиск по таблице..." aria-label="Поиск по таблице">
+            <button id="search-clear" class="search-clear" aria-label="Очистить поиск" hidden>&times;</button>
+        </div>
+        <span id="search-count" class="search-count"></span>
     </div>
 
-    <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
-        🌙
-    </button>
-</header>
-
-<div class="search-bar">
-    <div class="search-wrapper">
-        <input type="text" id="search-input" placeholder="Поиск по таблице..." aria-label="Поиск по таблице">
-        <button id="search-clear" class="search-clear" aria-label="Очистить поиск" hidden>&times;</button>
+    <div class="table-wrap">
+        <table id="compare-table"></table>
     </div>
-    <span id="search-count" class="search-count"></span>
-</div>
 
-<div class="table-wrap">
-    <table id="compare-table"></table>
-</div>
+    <section class="notes">
+        <h2>Примечания</h2>
+        <ol id="notes-list"></ol>
+    </section>
 
-<section class="notes">
-    <h2>Примечания</h2>
-    <ol id="notes-list"></ol>
-</section>
+    <section class="contribute">
+        <a href="https://github.com/HattabbI4/openwrt-router-compare" target="_blank" rel="noopener noreferrer">
+            Добавить роутер в таблицу
+        </a>
+    </section>
 
-<section class="contribute">
-    <a
-            href="https://github.com/HattabbI4/openwrt-router-compare"
-            target="_blank"
-            rel="noopener noreferrer"
-    >
-        Добавить роутер в таблицу
-    </a>
-</section>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
