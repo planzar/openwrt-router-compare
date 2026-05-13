@@ -3,8 +3,16 @@ name: CI
 on:
   push:
     branches: [ "main", "master" ]
+    paths:
+      - '**.csv'
+      - 'scripts/validate_csv.py'
+      - '.github/workflows/ci.yml'
   pull_request:
     branches: [ "main", "master" ]
+    paths:
+      - '**.csv'
+      - 'scripts/validate_csv.py'
+      - '.github/workflows/ci.yml'
 
 jobs:
   validate-csv:
