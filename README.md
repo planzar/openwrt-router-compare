@@ -52,7 +52,7 @@ https://github.com/HattabbI4/openwrt-router-compare
 Пример строки:
 
 ```csv
-MyRouter AX3000,MediaTek MT7981B,2,1.3 ГГц,Wi-Fi 6,128 MB NAND,512 MB DDR4|good,4 внешние,Да (WAN)|good,USB 3.0|good,Да[2]|warn,Нет,1 WAN + 3 LAN,Настольный
+MyRouter AX3000,MT7981B,2,1.3 ГГц,Wi-Fi 6,128 MB NAND,512 MB DDR4|good,4 внешние,Да (WAN)|good,USB 3.0|good,Да[2]|warn,Нет,1 WAN + 3 LAN,Настольный
 ```
 
 ---
